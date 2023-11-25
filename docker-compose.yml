@@ -1,0 +1,13 @@
+services:
+  db:
+    image: suga-test-backend
+    container_name: suga-test-backend
+    build:
+      context: .
+      target: suga-test-backend
+    environment:
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=suga
+    ports:
+      - 5432:5432
